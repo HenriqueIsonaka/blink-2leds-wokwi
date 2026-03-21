@@ -26,15 +26,22 @@
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(7, OUTPUT);
   pinMode(8, OUTPUT);
 }
 
 // the loop function runs over and over again forever
 void loop() {
   digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+  digitalWrite(7, LOW);
   digitalWrite(8, LOW);
-  delay(2000);                       // wait for a second
+  delay(3000);                       // wait for a second
   digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
-  digitalWrite(8, HIGH);
-  delay(2000);                       // wait for a second
+  digitalWrite(7, HIGH);
+  digitalWrite(8, LOW);
+  delay(2000);
+  digitalWrite(LED_BUILTIN, LOW);
+  digitalWrite(7, LOW);
+  digitalWrite(8, HIGH); 
+  delay(700);                      // wait for a second
 }
